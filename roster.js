@@ -1,0 +1,24 @@
+document.addEventListener("DOMContentLoaded", () => {
+	const grid = document.getElementById("rosterGrid");
+	const render = (list) => {
+		grid.innerHTML = "";
+		list.forEach((p) => {
+			const col = document.createElement("div");
+			col.className = "col";
+			col.className = "col-6 col-lg-2";
+			col.innerHTML = `
+                <div class="card h-100 shadow-sm">
+                    <img src="${p.photo}" alt="${p.firstName} ${p.lastName}" class="card-img-top" />
+                    <div class="card-body">
+                        <h5 class="card-title text-center">${p.firstName} ${p.lastName}</h5>
+                        <div class="badge badge-position badge-position-${p.position}">${p.position}</div>
+                        <p class="small text-muted mb-0"> Age ${p.age}</p>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(col);
+		});
+	};
+
+	render(players);
+});
