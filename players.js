@@ -29,44 +29,45 @@ class Team {
 	}
 }
 
-// Player objects.
+// Baseball player objects
 // Each player has a first name, last name, position, age, photo URL, hidden detail, and a boolean indicating if they are a star player.
-// The photo URL is empty for now, need to find appropriate images later.
 const playersList = [
-	new Player("Michael", "Johnson", "SS", 25,
+	new Player("Mike", "Trout", "CF", 33,
 		"",
-		"Led the league in stolen bases last season with 42 steals and maintains a pre-game ritual of eating exactly 3 blueberry muffins.",
+		"Has won three American League MVP awards and is considered one of the greatest players of his generation.",
 		true),
 
-	new Player("Sarah", "Martinez", "P", 30,
+	new Player("Max", "Scherzer", "P", 40,
 		"",
-		"Has pitched two no-hitters in her career and can throw a knuckleball with both hands."),
-
-	new Player("Robert", "Thompson", "C", 28,
-		"",
-		"Gold Glove winner with a cannon for an arm. Once threw out three base stealers in a single inning.",
+		"Has pitched two no-hitters in his career and is known for having heterochromia (different colored eyes).",
 		true),
 
-	new Player("Emily", "Rodriguez", "1B", 22,
+	new Player("Buster", "Posey", "C", 38,
 		"",
-		"Rookie of the Year candidate with 25 home runs in her first season. She's also a concert pianist in the off-season."),
-
-	new Player("David", "Wilson", "2B", 27,
-		"",
-		"Known for his incredible double-play turns. He studied ballet for 12 years to improve his footwork around the bag."),
-
-	new Player("Jessica", "Taylor", "3B", 29,
-		"",
-		"Has the highest fielding percentage at third base in league history and speaks five languages fluently.",
+		"Gold Glove winner with a cannon for an arm. Led his team to three World Series championships.",
 		true),
 
-	new Player("Marcus", "Anderson", "OF", 26,
+	new Player("Pete", "Alonso", "1B", 30,
 		"",
-		"Known for making spectacular diving catches in center field. Has a degree in astrophysics."),
+		"Rookie home run record holder and has won multiple Home Run Derby competitions."),
 
-	new Player("Olivia", "Garcia", "P", 24,
+	new Player("Jose", "Altuve", "2B", 35,
 		"",
-		"Throws a 98 mph fastball and is also an accomplished oil painter who has exhibited in galleries.")
+		"Despite being one of the shortest players in MLB at 5'6\", has won multiple batting titles and an MVP award."),
+
+	new Player("Nolan", "Arenado", "3B", 34,
+		"",
+		"Has won multiple Gold Glove awards and is known for making spectacular defensive plays at third base.",
+		true),
+
+	new Player("Francisco", "Lindor", "SS", 31,
+		"",
+		"Known as 'Mr. Smile' for his infectious enthusiasm, and is a four-time All-Star shortstop."),
+
+	new Player("Juan", "Soto", "RF", 26,
+		"",
+		"One of the youngest players to win a batting title and known for his 'Soto Shuffle' in the batter's box.",
+		true)
 ];
 
 // Create team object
