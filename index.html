@@ -19,7 +19,7 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-0">
             <div class="container">
-                <a class="navbar-brand" href="#"><i class="fas fa-baseball-ball me-2"></i>MLB All-Stars</a>
+                <a class="navbar-brand" href="index.html"><i class="fas fa-baseball-ball me-2"></i>MLB All-Stars</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,16 +27,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-home me-1"></i> Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html"><i class="fas fa-info-circle me-1"></i> About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="roster.html"><i class="fas fa-users me-1"></i> Roster</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-calendar-alt me-1"></i> Schedule</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-chart-line me-1"></i> Stats</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-trophy me-1"></i> Achievements</a>
                         </li>
                     </ul>
                 </div>
@@ -57,41 +57,40 @@
             </div>
         </div>
     </header>
-    <main class="container">
-        <div class="row mb-4">
-            <div class="col-md-8">
-                <h2 class="text-center text-md-start mb-3">Meet Our All-Stars</h2>
-                <p class="lead text-muted">Browse through our roster of elite baseball players who are committed to excellence both on and off the field. Click on any player card to learn more about their achievements and hidden talents.</p>
-            </div>
-            <div class="col-md-4 d-flex align-items-center justify-content-md-end justify-content-center mt-3 mt-md-0">
-                <div class="btn-group" role="group" aria-label="Filter buttons">
-                    <button type="button" class="btn btn-outline-primary active px-3" id="all-players">All Players</button>
-                    <button type="button" class="btn btn-outline-primary px-3" id="star-players">Star Players</button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="card mb-4 bg-light border-0">
-                    <div class="card-body p-4">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div>
-                                <h5 class="mb-1"><i class="fas fa-info-circle me-2 text-primary"></i>Team Stats</h5>
-                                <p class="text-muted mb-0">2025 Season</p>
+    <main>
+        <!-- Hero Section -->
+        <div class="container-fluid py-5 bg-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0">
+                        <h1 class="display-3 fw-bold mb-4">Welcome to<br>MLB All-Stars</h1>
+                        <p class="lead mb-4">Experience the thrill of baseball with our championship-winning team of elite players committed to excellence both on and off the field.</p>
+                        <div class="d-flex flex-wrap">
+                            <a href="roster.html" class="btn btn-primary btn-lg me-3 mb-3 mb-md-0">
+                                <i class="fas fa-users me-2"></i>Meet Our Team
+                            </a>
+                            <a href="about.html" class="btn btn-outline-primary btn-lg">
+                                <i class="fas fa-info-circle me-2"></i>About Us
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="text-center p-4 rounded bg-white shadow">
+                            <div class="bg-dark rounded p-5 mb-4" style="height: 300px; display: flex; align-items: center; justify-content: center;">
+                                <i class="fas fa-baseball-ball text-white" style="font-size: 80px;"></i>
                             </div>
-                            <div class="d-flex">
-                                <div class="text-center mx-3">
-                                    <h4 class="mb-0 text-primary">15</h4>
-                                    <small class="text-muted">Wins</small>
+                            <div class="d-flex justify-content-around mt-3">
+                                <div class="text-center px-3">
+                                    <h3 class="text-primary mb-0">8</h3>
+                                    <p class="text-muted">Star Players</p>
                                 </div>
-                                <div class="text-center mx-3">
-                                    <h4 class="mb-0 text-primary">5</h4>
-                                    <small class="text-muted">Losses</small>
+                                <div class="text-center px-3">
+                                    <h3 class="text-primary mb-0">2</h3>
+                                    <p class="text-muted">Championships</p>
                                 </div>
-                                <div class="text-center mx-3">
-                                    <h4 class="mb-0 text-primary">.750</h4>
-                                    <small class="text-muted">Win %</small>
+                                <div class="text-center px-3">
+                                    <h3 class="text-primary mb-0">15-5</h3>
+                                    <p class="text-muted">Record</p>
                                 </div>
                             </div>
                         </div>
@@ -99,24 +98,122 @@
                 </div>
             </div>
         </div>
-        
-        <div id="rosterGrid" class="row g-4">
-            <!-- The player cards will be dynamically inserted here -->
+
+        <!-- Featured Sections -->
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">Discover Our Team</h2>
+                <p class="lead text-muted">Everything you need to know about the MLB All-Stars</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-users text-white" style="font-size: 32px;"></i>
+                            </div>
+                            <h3 class="card-title">Meet the Team</h3>
+                            <p class="card-text">Explore our roster of elite baseball players, their stats, achievements, and hidden talents.</p>
+                            <a href="roster.html" class="btn btn-outline-primary mt-2">View Roster</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-history text-white" style="font-size: 32px;"></i>
+                            </div>
+                            <h3 class="card-title">Our History</h3>
+                            <p class="card-text">Learn about the history of MLB All-Stars, our achievements, philosophy, and team leadership.</p>
+                            <a href="about.html" class="btn btn-outline-primary mt-2">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-4">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                                <i class="fas fa-calendar-alt text-white" style="font-size: 32px;"></i>
+                            </div>
+                            <h3 class="card-title">Game Schedule</h3>
+                            <p class="card-text">Check out our upcoming games, purchase tickets, and join us for an exciting baseball experience.</p>
+                            <a href="#" class="btn btn-outline-primary mt-2">View Schedule</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Modal for Player Details -->
-        <div class="modal fade" id="playerModal" tabindex="-1" aria-labelledby="playerModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="playerModalLabel">Player Details</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <!-- Featured Players -->
+        <div class="bg-light py-5">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-6 fw-bold">Featured Players</h2>
+                    <p class="lead text-muted">Meet some of our star players</p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card border-0 shadow h-100">
+                            <div class="position-relative">
+                                <div class="bg-dark" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-user text-light" style="font-size: 64px;"></i>
+                                </div>
+                                <span class="position-badge bg-warning text-dark">Star Player</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Mike Trout</h4>
+                                <p class="text-muted mb-3">Center Field (CF)</p>
+                                <a href="roster.html" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-body" id="playerModalBody">
-                        <!-- The player details will be dynamically inserted here -->
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <div class="card border-0 shadow h-100">
+                            <div class="position-relative">
+                                <div class="bg-dark" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-user text-light" style="font-size: 64px;"></i>
+                                </div>
+                                <span class="position-badge bg-warning text-dark">Star Player</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Max Scherzer</h4>
+                                <p class="text-muted mb-3">Pitcher (P)</p>
+                                <a href="roster.html" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow h-100">
+                            <div class="position-relative">
+                                <div class="bg-dark" style="height: 200px; display: flex; align-items: center; justify-content: center;">
+                                    <i class="fas fa-user text-light" style="font-size: 64px;"></i>
+                                </div>
+                                <span class="position-badge bg-warning text-dark">Star Player</span>
+                            </div>
+                            <div class="card-body text-center">
+                                <h4>Juan Soto</h4>
+                                <p class="text-muted mb-3">Right Field (RF)</p>
+                                <a href="roster.html" class="btn btn-sm btn-outline-primary">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 shadow-lg p-5 text-center">
+                        <h2 class="mb-4">Ready to see our full roster?</h2>
+                        <p class="lead mb-4">Check out our complete lineup of talented players and discover their hidden talents.</p>
+                        <div class="d-grid gap-2 col-md-6 mx-auto">
+                            <a href="roster.html" class="btn btn-primary btn-lg">View Team Roster</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,9 +229,9 @@
                 <div class="col-md-4 mb-3 mb-md-0">
                     <h5 class="mb-3">Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> Home</a></li>
-                        <li><a href="#" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> Schedule</a></li>
-                        <li><a href="#" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> Stats</a></li>
+                        <li><a href="index.html" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> Home</a></li>
+                        <li><a href="about.html" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> About</a></li>
+                        <li><a href="roster.html" class="text-decoration-none text-white-50"><i class="fas fa-chevron-right me-1"></i> Roster</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
