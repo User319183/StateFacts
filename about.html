@@ -17,9 +17,15 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="index.html">MLB All-Stars</a>
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-2"
+                        style="width: 40px; height: 40px;">
+                        <i class="fas fa-baseball-ball text-white"></i>
+                    </div>
+                    MLB All-Stars
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -39,15 +45,29 @@
                             <a class="nav-link" href="#">Schedule</a>
                         </li>
                     </ul>
+                    <div class="ms-lg-3 mt-3 mt-lg-0">
+                        <a href="#" class="btn btn-sm btn-primary">
+                            <i class="fas fa-ticket-alt me-2"></i>Get Tickets
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
-        <div class="bg-light text-dark py-4 mb-4 border-bottom">
+        <div class="about-header">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-md-8">
-                        <h1 class="display-5 fw-bold mb-2">About Our Team</h1>
-                        <p class="lead mb-0">The history and story behind MLB All-Stars</p>
+                    <div class="col-md-8 animate-fade-in">
+                        <h1 class="display-4 fw-bold mb-3">About Our <span class="gradient-text">All-Stars</span></h1>
+                        <p class="lead mb-4">The history, legacy, and winning tradition behind MLB's most elite team</p>
+                        <div class="d-flex gap-3">
+                            <a href="#legacy" class="btn btn-light">Our Legacy</a>
+                            <a href="#team" class="btn btn-outline-light">Meet Our Team</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-none d-md-block animate-slide-in">
+                        <div class="text-center">
+                            <i class="fas fa-baseball-ball text-white" style="font-size: 120px; opacity: 0.8;"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,165 +77,381 @@
     <main class="container my-5">
         <div class="row">
             <div class="col-lg-8">
-                <div class="card mb-4">
-                    <div class="card-body p-4">
-                        <h2 class="mb-4 border-bottom pb-2">Our Legacy</h2>
-                        <p class="lead">Founded in 2020, the MLB All-Stars has quickly become one of the most dominant forces in baseball.</p>
-                        
-                        <p>What started as a collection of talented but underappreciated players has evolved into a championship-winning dynasty. Our team philosophy centers on not just recruiting the best talent, but developing character, sportsmanship, and a winning mindset.</p>
-                        
-                        <p>Under the leadership of our general manager Sarah Williams and head coach Marcus Johnson, the All-Stars have consistently defied expectations and brought innovation to every aspect of the game.</p>
-                        
-                        <div class="row my-4">
+                <div class="card mb-4 shadow-lg">
+                    <div class="card-body p-5">
+                        <h2 id="legacy" class="mb-4 pb-2 gradient-text">Our Legacy</h2>
+                        <div class="content-divider mb-4"></div>
+                        <p class="lead fw-bold">Founded in 2020, the MLB All-Stars has quickly become one of the most
+                            dominant forces in baseball, transforming the game one season at a time.</p>
+
+                        <p>What began as a collection of talented but underappreciated players has evolved into a
+                            championship-winning dynasty that continues to redefine excellence. Our team philosophy
+                            centers on not just recruiting the best talent, but developing character, sportsmanship, and
+                            a winning mindset that transcends the diamond.</p>
+
+                        <p>Under the visionary leadership of our general manager Sarah Williams and legendary head coach
+                            Marcus Johnson, the All-Stars have consistently defied expectations and brought innovation
+                            to every aspect of the game. The result? A winning tradition that fans can count on season
+                            after season.</p>
+
+                        <div class="row my-5">
                             <div class="col-md-6">
-                                <div class="card bg-light mb-3">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-3">Our Achievements</h5>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">World Series Champions (2023, 2024)</li>
-                                            <li class="mb-2">League Leaders (2022, 2023, 2024, 2025)</li>
-                                            <li class="mb-2">Most All-Star Selections (2021-2025)</li>
-                                            <li>Highest Team Batting Average (2024)</li>
-                                        </ul>
+                                <div class="stats-card mb-4">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3"
+                                            style="width: 50px; height: 50px;">
+                                            <i class="fas fa-trophy text-white"></i>
+                                        </div>
+                                        <h5 class="card-title mb-0">Our Achievements</h5>
                                     </div>
+                                    <ul class="list-unstyled ps-2">
+                                        <li class="mb-3 d-flex align-items-center">
+                                            <span class="badge bg-warning me-2"><i class="fas fa-star"></i></span>
+                                            <strong>World Series Champions</strong> (2023, 2024)
+                                        </li>
+                                        <li class="mb-3 d-flex align-items-center">
+                                            <span class="badge bg-primary me-2"><i class="fas fa-medal"></i></span>
+                                            <strong>League Leaders</strong> (2022, 2023, 2024, 2025)
+                                        </li>
+                                        <li class="mb-3 d-flex align-items-center">
+                                            <span class="badge bg-info me-2"><i class="fas fa-users"></i></span>
+                                            <strong>Most All-Star Selections</strong> (2021-2025)
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <span class="badge bg-success me-2"><i class="fas fa-chart-line"></i></span>
+                                            <strong>Highest Team Batting Average</strong> (2024)
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="card bg-light">
-                                    <div class="card-body">
-                                        <h5 class="card-title mb-3">Team Stats</h5>
-                                        <ul class="list-unstyled">
-                                            <li class="mb-2">15-5 Record (Current Season)</li>
-                                            <li class="mb-2">98-64 Record (2024 Season)</li>
-                                            <li class="mb-2">Team ERA: 3.25</li>
-                                            <li>Team Batting Average: .285</li>
-                                        </ul>
+                                <div class="stats-card">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center me-3"
+                                            style="width: 50px; height: 50px;">
+                                            <i class="fas fa-chart-bar text-white"></i>
+                                        </div>
+                                        <h5 class="card-title mb-0">Team Stats</h5>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6 mb-3">
+                                            <div class="p-3 bg-light rounded text-center">
+                                                <h3 class="mb-0 fw-bold gradient-text">15-5</h3>
+                                                <small class="text-muted">Current Record</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <div class="p-3 bg-light rounded text-center">
+                                                <h3 class="mb-0 fw-bold gradient-text">98-64</h3>
+                                                <small class="text-muted">2024 Season</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-3 bg-light rounded text-center">
+                                                <h3 class="mb-0 fw-bold gradient-text">3.25</h3>
+                                                <small class="text-muted">Team ERA</small>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-3 bg-light rounded text-center">
+                                                <h3 class="mb-0 fw-bold gradient-text">.285</h3>
+                                                <small class="text-muted">Batting Avg</small>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
-                        <h3 class="mb-3">Team Philosophy</h3>
-                        <p>At MLB All-Stars, we believe that excellence on the field begins with character off the field. Our team values include:</p>
-                        <ul>
-                            <li><strong>Excellence</strong> - We strive to be the best in everything we do</li>
-                            <li><strong>Teamwork</strong> - Success comes from working together with trust and respect</li>
-                            <li><strong>Innovation</strong> - We're constantly looking for new ways to improve</li>
-                            <li><strong>Community</strong> - We give back to the communities that support us</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-body p-4">
-                        <h2 class="mb-4 border-bottom pb-3">Team Leadership</h2>
-                        
-                        <div class="row align-items-center mb-4">
-                            <div class="col-md-4 text-center">
-                                <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
-                                    <i class="fas fa-user-tie text-white" style="font-size: 48px;"></i>
+
+                        <h3 class="mb-4 gradient-text">Team Philosophy</h3>
+                        <div class="content-divider mb-4" style="width: 60px;"></div>
+                        <p class="lead">At MLB All-Stars, we believe that excellence on the field begins with character
+                            off the field. Our championship DNA is built on four core pillars:</p>
+
+                        <div class="row mt-4">
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="fas fa-award text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Excellence</h5>
+                                        <p class="mb-0">We strive to be the best in everything we do, from training and
+                                            preparation to execution on the field.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <h4>Sarah Williams</h4>
-                                <p class="text-muted mb-2">General Manager</p>
-                                <p>A former college softball star and baseball analytics pioneer, Sarah has built this team from the ground up with a focus on both traditional scouting and cutting-edge statistical analysis.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="row align-items-center">
-                            <div class="col-md-4 text-center">
-                                <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center mb-3" style="width: 120px; height: 120px;">
-                                    <i class="fas fa-user-tie text-white" style="font-size: 48px;"></i>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="rounded-circle bg-success d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="fas fa-users text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Teamwork</h5>
+                                        <p class="mb-0">Success comes from working together with trust and respect.
+                                            Every player has a vital role in our collective success.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <h4>Marcus Johnson</h4>
-                                <p class="text-muted mb-2">Head Coach</p>
-                                <p>A respected former MLB player with 15 years of professional experience, Marcus brings leadership, tactical knowledge, and a player-first coaching philosophy to the All-Stars.</p>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="rounded-circle bg-info d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="fas fa-lightbulb text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Innovation</h5>
+                                        <p class="mb-0">We're constantly looking for new ways to improve our game, using
+                                            cutting-edge analytics and training methods.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="d-flex">
+                                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center me-3 flex-shrink-0"
+                                        style="width: 40px; height: 40px;">
+                                        <i class="fas fa-heart text-white"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="fw-bold mb-2">Community</h5>
+                                        <p class="mb-0">We give back to the communities that support us, recognizing our
+                                            role as ambassadors both on and off the field.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-4">
-                <div class="card border-0 shadow-sm mb-4">
+                <div class="card border-0 shadow-lg mb-4 position-relative overflow-hidden">
+                    <div class="position-absolute"
+                        style="top: 0; right: 0; width: 120px; height: 120px; background: linear-gradient(135deg, var(--primary-color), transparent); border-radius: 0 0 0 120px; opacity: 0.1;">
+                    </div>
                     <div class="card-body p-4">
-                        <h3 class="mb-3">Home Stadium</h3>
-                        <div class="bg-dark rounded mb-3" style="height: 200px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-stadium text-white" style="font-size: 48px;"></i>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3"
+                                style="width: 50px; height: 50px;">
+                                <i class="fas fa-place-of-worship text-white"></i>
+                            </div>
+                            <h3 class="mb-0 gradient-text">Home Stadium</h3>
                         </div>
-                        <h4>All-Star Field</h4>
-                        <p>Built in 2020, our state-of-the-art stadium seats 45,000 fans and features the latest amenities and technology for players and spectators alike.</p>
-                        <ul class="list-unstyled">
-                            <li><i class="fas fa-map-marker-alt me-2 text-primary"></i>123 Baseball Way, Champion City</li>
-                            <li><i class="fas fa-phone me-2 text-primary"></i>555-123-4567</li>
-                        </ul>
+
+                        <div class="bg-dark rounded mb-4 img-hover-zoom"
+                            style="height: 220px; overflow: hidden; position: relative;">
+                            <div class="position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-baseball-ball text-white" style="font-size: 48px;"></i>
+                            </div>
+                            <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-gradient"
+                                style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+                                <span class="badge bg-danger">SOLD OUT</span>
+                                <small class="text-white d-block mt-1">Next game: June 5, 2025</small>
+                            </div>
+                        </div>
+
+                        <h4 class="fw-bold mb-3">All-Star Field</h4>
+                        <p>Built in 2020, our state-of-the-art stadium seats 45,000 fans and features the latest
+                            amenities and technology for players and spectators alike.</p>
+
+                        <div class="bg-light p-3 rounded mt-4">
+                            <ul class="list-unstyled mb-0">
+                                <li class="mb-3 d-flex align-items-center">
+                                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">
+                                        <i class="fas fa-map-marker-alt text-white"></i>
+                                    </div>
+                                    <span>123 Baseball Way, Champion City</span>
+                                </li>
+                                <li class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3"
+                                        style="width: 36px; height: 36px;">
+                                        <i class="fas fa-phone text-white"></i>
+                                    </div>
+                                    <span>555-123-4567</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="card border-0 shadow-sm mb-4">
+
+                <div class="card border-0 shadow-lg mb-4 position-relative overflow-hidden">
+                    <div class="position-absolute"
+                        style="top: 0; right: 0; width: 120px; height: 120px; background: linear-gradient(135deg, var(--secondary-color), transparent); border-radius: 0 0 0 120px; opacity: 0.1;">
+                    </div>
                     <div class="card-body p-4">
-                        <h3 class="mb-3">Community Impact</h3>
-                        <p>The All-Stars are committed to making a difference off the field through various community initiatives:</p>
-                        <ul>
-                            <li>Youth baseball clinics</li>
-                            <li>Hospital visits</li>
-                            <li>Charity fundraisers</li>
-                            <li>School reading programs</li>
-                        </ul>
-                        <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-secondary d-inline-flex align-items-center justify-content-center me-3"
+                                style="width: 50px; height: 50px;">
+                                <i class="fas fa-hands-helping text-white"></i>
+                            </div>
+                            <h3 class="mb-0 gradient-text">Community Impact</h3>
+                        </div>
+
+                        <p class="lead">The All-Stars are committed to making a difference off the field through various
+                            community initiatives:</p>
+
+                        <div class="row mt-4">
+                            <div class="col-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-info d-inline-flex align-items-center justify-content-center me-2 flex-shrink-0"
+                                        style="width: 32px; height: 32px;">
+                                        <i class="fas fa-child text-white" style="font-size: 14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Youth Clinics</h6>
+                                        <small class="text-muted">25+ annually</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-danger d-inline-flex align-items-center justify-content-center me-2 flex-shrink-0"
+                                        style="width: 32px; height: 32px;">
+                                        <i class="fas fa-hospital text-white" style="font-size: 14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Hospital Visits</h6>
+                                        <small class="text-muted">Monthly</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-success d-inline-flex align-items-center justify-content-center me-2 flex-shrink-0"
+                                        style="width: 32px; height: 32px;">
+                                        <i class="fas fa-donate text-white" style="font-size: 14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Fundraisers</h6>
+                                        <small class="text-muted">$2M+ raised</small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <div class="rounded-circle bg-warning d-inline-flex align-items-center justify-content-center me-2 flex-shrink-0"
+                                        style="width: 32px; height: 32px;">
+                                        <i class="fas fa-book text-white" style="font-size: 14px;"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0 fw-bold">Reading Programs</h6>
+                                        <small class="text-muted">50+ schools</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-center mt-4">
+                            <p class="mb-3 fst-italic">"Making a difference one community at a time"</p>
+                            <a href="#" class="btn btn-primary">Learn More</a>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="alert alert-info">
-                    <h5><i class="fas fa-info-circle me-2"></i>Interested in joining our team?</h5>
-                    <p class="mb-2">We're always looking for talented individuals to join our organization, both on and off the field.</p>
-                    <a href="#" class="btn btn-sm btn-info text-white">Contact Us</a>
                 </div>
             </div>
         </div>
     </main>
 
-    <footer class="py-4 mt-5">
+    <footer class="py-5 mt-5">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5 class="mb-3">MLB All-Stars</h5>
-                    <p class="mb-0 text-muted">Join us as we continue our quest for championship glory in the 2025 MLB season.</p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5 class="mb-3">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-decoration-none">Home</a></li>
-                        <li><a href="about.html" class="text-decoration-none">About</a></li>
-                        <li><a href="roster.html" class="text-decoration-none">Roster</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5 class="mb-3">Follow Us</h5>
-                    <div class="d-flex">
-                        <a href="#" class="text-decoration-none me-3"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-decoration-none me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-decoration-none me-3"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-decoration-none"><i class="fab fa-youtube"></i></a>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="rounded-circle bg-primary d-inline-flex align-items-center justify-content-center me-3"
+                            style="width: 40px; height: 40px;">
+                            <i class="fas fa-baseball-ball text-white"></i>
+                        </div>
+                        <h4 class="mb-0 text-white">MLB All-Stars</h4>
+                    </div>
+                    <p class="mb-4 text-white-50">Join us as we continue our quest for championship glory in the 2025
+                        MLB season. Follow us for the latest updates and team news.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"
+                            style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"
+                            style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"
+                            style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="btn btn-sm btn-outline-light rounded-circle"
+                            style="width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-youtube"></i>
+                        </a>
                     </div>
                 </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="mb-3 text-white">Quick Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Home
+                            </a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>About
+                            </a></li>
+                        <li class="mb-2"><a href="roster.html" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Roster
+                            </a></li>
+                        <li><a href="#" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Schedule
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h5 class="mb-3 text-white">Resources</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Stats
+                            </a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>News
+                            </a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Tickets
+                            </a></li>
+                        <li><a href="#" class="text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-chevron-right me-2 small text-primary"></i>Merch
+                            </a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="mb-3 text-white">Stay Updated</h5>
+                    <p class="text-white-50 mb-3">Subscribe to our newsletter for the latest team updates, game
+                        schedules, and exclusive content.</p>
+                    <form class="d-flex gap-2">
+                        <input type="email" class="form-control" placeholder="Email address">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
             </div>
+
             <hr class="my-4 opacity-25">
-            <div class="text-center">
-                <p class="mb-0 text-muted">&copy; 2025 Team All-Stars Roster Showcase | All Rights Reserved</p>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="mb-0 mb-md-0 text-white-50">&copy; 2025 MLB All-Stars | All Rights Reserved</p>
+                <div>
+                    <a href="#" class="text-white-50 text-decoration-none me-3">Privacy Policy</a>
+                    <a href="#" class="text-white-50 text-decoration-none">Terms of Use</a>
+                </div>
             </div>
         </div>
     </footer>
-    
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
 </body>
 

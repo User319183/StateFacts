@@ -1,15 +1,28 @@
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    const grid = document.getElementById("rosterGrid");
-    const playerModal = new bootstrap.Modal(document.getElementById('playerModal'));
-    const playerModalBody = document.getElementById('playerModalBody');
-    const playerModalLabel = document.getElementById('playerModalLabel');
-    const allPlayersBtn = document.getElementById('all-players');
-    const starPlayersBtn = document.getElementById('star-players');
-    
+    // Get DOM elements, which might be null if they don't exist on the current page
+    const grid = document.getElementById("rosterGrid"); // Roster grid container
+    const playerModalElement = document.getElementById('playerModal'); // Modal element
+    const playerModalBody = document.getElementById('playerModalBody'); // Modal body
+    const playerModalLabel = document.getElementById('playerModalLabel'); // Modal label
+    const allPlayersBtn = document.getElementById('all-players'); // All players filter button
+    const starPlayersBtn = document.getElementById('star-players'); // Star players filter button
+
+    // Only continue with roster functionality if necessary elements exist on the page
+    if (!grid) {
+        return; // Exit early if we're not on the roster page
+    }
+
+    // Initialize modal only if the element exists
+    let playerModal;
+    if (playerModalElement) {
+        playerModal = new bootstrap.Modal(playerModalElement); // Create Bootstrap modal instance
+    }
+
     // Render function to display all player cards in the DOM
     const render = (list) => {
-        grid.innerHTML = "";
-        
+        grid.innerHTML = ""; // Clear grid
+
         if (list.length === 0) {
             grid.innerHTML = `
                 <div class="col-12 text-center py-5">
@@ -17,23 +30,23 @@ document.addEventListener("DOMContentLoaded", () => {
                         <i class="fas fa-info-circle me-2"></i> No players found matching the current filter.
                     </div>
                 </div>
-            `;
+            `; // Show message if no players found
             return;
         }
-        
+
         list.forEach((player, index) => {
             const col = document.createElement("div");
-            col.className = "col-12 col-sm-6 col-md-4 col-lg-3";
-            
+            col.className = "col-12 col-sm-6 col-md-4 col-lg-3"; // Set column classes
+
             const card = document.createElement("div");
-            
+
             if (player.starPlayer) {
-                card.className = "card h-100 shadow star-player"; 
+                card.className = "card h-100 shadow star-player"; // Add special class for star players
             } else {
-                card.className = "card h-100 shadow-sm";
+                card.className = "card h-100 shadow-sm"; // Regular card class
             }
-            
-            // Populate the card with player info
+
+            // Populating the card with player info
             card.innerHTML = `
                 <div class="position-relative">
                     <img src="${player.photo}" alt="${player.fullName}" class="card-img-top" />
@@ -49,25 +62,25 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 </div>
             `;
-            
-            col.appendChild(card);
-            grid.appendChild(col);
-            
+
+            col.appendChild(card); // Add card to column
+            grid.appendChild(col); // Add column to grid
+
             // Add event listener for the More Info button
-            const moreInfoBtn = card.querySelector('.btn-more-info');
-            moreInfoBtn.addEventListener('click', function() {
-                const playerIndex = this.getAttribute('data-player-index');
-                const selectedPlayer = list[playerIndex];
-                
+            const moreInfoBtn = card.querySelector('.btn-more-info'); // Get More Info button
+            moreInfoBtn.addEventListener('click', function () {
+                const playerIndex = this.getAttribute('data-player-index'); // Get player index
+                const selectedPlayer = list[playerIndex]; // Get selected player
+
                 // Update the modal content
-                playerModalLabel.textContent = selectedPlayer.fullName;
-                
+                playerModalLabel.textContent = selectedPlayer.fullName; // Set modal label
+
                 // Determine player status badge
                 let statusBadge = '';
                 if (selectedPlayer.starPlayer) {
                     statusBadge = '<span class="badge bg-warning text-dark me-2"><i class="fas fa-star me-1"></i> Star Player</span>';
                 }
-                
+
                 playerModalBody.innerHTML = `
                     <div class="row">
                         <div class="col-md-5 text-center mb-3">
@@ -91,25 +104,32 @@ document.addEventListener("DOMContentLoaded", () => {
                     </div>
                 `;
 
-                playerModal.show();
+                // Show the modal if it exists
+                if (playerModal) {
+                    playerModal.show(); // Show modal
+                }
             });
         });
     };
-    
-    // Filter handlers
-    allPlayersBtn.addEventListener('click', function() {
-        allPlayersBtn.classList.add('active');
-        starPlayersBtn.classList.remove('active');
-        render(players);
-    });
-    
-    starPlayersBtn.addEventListener('click', function() {
-        starPlayersBtn.classList.add('active');
-        allPlayersBtn.classList.remove('active');
-        const starPlayers = players.filter(player => player.starPlayer);
-        render(starPlayers);
-    });
 
-    // Initialize the roster with all players
-    render(players);
+    // Filter handlers | only add event listeners if the elements exist
+    if (allPlayersBtn && starPlayersBtn) {
+        allPlayersBtn.addEventListener('click', function () {
+            allPlayersBtn.classList.add('active'); // Highlight all players button
+            starPlayersBtn.classList.remove('active'); // Unhighlight star players button
+            render(players); // Show all players
+        });
+
+        starPlayersBtn.addEventListener('click', function () {
+            starPlayersBtn.classList.add('active'); // Highlight star players button
+            allPlayersBtn.classList.remove('active'); // Unhighlight all players button
+            const starPlayers = players.filter(player => player.starPlayer); // Filter star players
+            render(starPlayers); // Show only star players
+        });
+    }
+
+    // Init the roster with all players only if we're on the roster page
+    if (grid && players) {
+        render(players); // Render all players on page load
+    }
 });
