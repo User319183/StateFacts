@@ -623,6 +623,7 @@ p {
     background-clip: text;
     color: transparent;
     display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
 }
 
 .about-header .gradient-text {
